@@ -19,7 +19,7 @@
                             {% endfor %}
                             {% if sameTagCount >= 2 %}
                                 <div>   
-                                    <a href="{{ post.url }}">
+                                    <a href="{{ site.baseurl }}{{ post.url }}">
                                         <img class="related-post-preview" src="{{ site.baseurl }}/img/{{post.img-preview}}-default.jpg">
                                         <h5>{{ post.title }}</h5>
                                     </a>
