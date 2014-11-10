@@ -33,10 +33,17 @@
           $items = $accordion.find('> dd'),
           $targets = $items.find('.content'),
           options = {
+<<<<<<< HEAD
             active_class : 'active',
             multi_expand: false,  
             speed : 250,      
             toggleable: true
+=======
+            active_class : 'active',  
+            multi_expand: false,    
+            speed : 250,        
+            toggleable: true      
+>>>>>>> a2e4e996d781a2f19242c3fbc5506c38f0531439
           }
         ;
         $.extend(options, Foundation.utils.data_options($accordion));
@@ -91,18 +98,8 @@
     <script>
     $(document).ready(function() {
     $("#owl-post").owlCarousel({
-        navigation : false, // Show next and prev buttons
+        navigation : false,
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true
-/*
-        "singleItem:true" is a shortcut for:
-        items : 1,
-        itemsDesktop : false,
-        itemsDesktopSmall : false,
-        itemsTablet: false,
-        itemsMobile : false   
-  */
-    });    
-    });
     </script>
