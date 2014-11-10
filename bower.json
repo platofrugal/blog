@@ -1,0 +1,11 @@
+{
+  "name": "Plato Frugal",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation"
+  },
+  "devDependencies": {
+    "salvattore": "~1.0.7",
+    "owlcarousel": "~1.3.2",
+    "classie": "~1.0.1"
+  }
+}

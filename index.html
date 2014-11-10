@@ -1,23 +1,49 @@
 ---
-layout: default
+title: blog
+layout: default-blog
+categories: blog
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="grid" data-columns>  
+{% for post in site.posts %}      
+    <div class="preview"> 
+        <a class="" href="{{ post.url }}">
+            <figure class="caption embed">
+            {% if post.img-size %}
+                <img class="caption-media" data-interchange="{% for size in post.img-size %}[{{site.baseurl}}/img/{{post.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">              
+            {% endif %}
+                
+                <div class="caption-overlay">
+                    <figcaption>
+                    {% if post.category != empty %}
+                        <h3><span class="caption-title">{{ post.category }}</span></h3>
+                        {% if post.category == 'workout' %}
+                            <span class="caption-italic">requires</span></br>
+                        {% elsif post.category == 'recipe' %}
+                            <span class="caption-italic">tagged as</span></br>       
+                        {% endif %}
+                    {% endif %}
+                        <h4 class="caption-tags">                  
+                        {% if post.tags %}
+                            {% if post.tags contains 'nothing' %}
+                                <i class="fa fa-ban fa-lg"></i>
+                            {% else %}
+                                {{ post.tags | join: ', '}}                     
+                            {% endif %}
+                        {% endif %}
+                        </h4>
+                    </figcaption>   
+                </div>
+            </figure>          
+            <h5>{{ post.title | upcase }}</h5>
+            <span class="date">{{ post.date | date: "%-d %B %Y" }}</span>
+        </a>    
+    </div>      
+{% endfor %}
 </div>
+
+
+
+
+                            
+                       

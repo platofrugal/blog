@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+    {% include head.html %}
+    <body>
+        {% include top-bar.html %}
+        <div id="padding-top">         
+            <div {% if page.title == 'archive' or page.title == 'about' or page.title == 'disclaimer' %} class="main {{ page.title }}"{% endif %}>           
+                {{ content }}       
+            </div>               
+        {% include related-posts.html %}    
+        </div>  
+        {% if page.title != 'archive' %}             
+            {% include footer.html %}
+        {% else %}
+            {% include js.html %}
+        {% endif %}
+    </body>
 </html>
+
+
+
+
+
+

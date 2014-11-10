@@ -1,0 +1,107 @@
+
+<div itemscope itemtype="http://schema.org/Recipe">
+    {% if page.img-size %}
+    <div class="wrap hide-for-print" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-background}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">             
+    {% endif %}
+        <div class="row">
+            <div class="medium-6 columns">
+                <h2><span itemprop="name">{{ page.title | upcase }}</span></h2>
+                <div class="row">
+                    <div class="medium-6 columns">
+                        <ul>
+                            <li><div class="sublist-italic">Duration</div><h5><meta itemprop="totalTime" content="PT5M">{{ page.duration }}</h5></li>
+                            <li><div class="sublist-italic">Vessel</div><h5> {{ page.vessel }}</h5></li>
+                            <li><div class="sublist-italic">Heat</div>
+                                <h5>
+                                    <span itemprop="cookingMethod">
+                                    {% if page.heat != empty %}
+                                        {{ page.heat }}
+                                    {% elsif page.heat == empty %}
+                                        <i class="fa fa-ban fa-lg"></i>                     
+                                    {% endif %}
+                                    </span>
+                                </h5>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="medium-6 columns">
+                        <ul>
+                            <li><span itemprop="recipeYield"><div class="sublist-italic">Servings</div><h5> {{ page.servings }}</h5></span></li>
+                            <li><div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation"><div class="sublist-italic">Tagged as</div><h5><span itemprop="description">{{ page.tags | join: ', ' }}</span></h5></div></li>
+                        </ul>
+                    </div>
+                </div>                  
+            </div>
+            
+            <div class="medium-6 columns">
+                {% if page.img-size %}
+                <a href="#anker-impressions"><div class="img-wrap" itemprop="image" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}"></div></a>              
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row main"><br>
+
+
+        <div class=" medium-6 columns">
+
+            <h3>Ingredients</h3>     
+            {% for part in page.ingredients %}
+            
+                <div class="sublist-italic">{{ part[0] }}</div>
+                <ul>
+                {% for ingredient in part[1] %}
+                    <li><span itemprop="ingredients">{{ ingredient }}</span></li>
+                {% endfor %}
+                </ul>
+
+            {% endfor %}
+
+        </div>
+        <div class="medium-6 columns">   
+
+           <h3>Instructions</h3>     
+            {% for part in page.instructions %}
+            
+                <div class="sublist-italic">{{ part[0] }}</div>
+                <ul>
+                {% for instruction in part[1] %}
+                    <li><span itemprop="recipeInstructions">{{ instruction }}</span></li>
+                {% endfor %}
+                </ul>
+
+            {% endfor %}
+           
+        </div>
+
+        <div class="small-12 columns">
+            <h3>Note</h3>
+            <p>
+                {{ page.note }}
+            </p>
+        </div> 
+    
+        {% include share.html %}
+           
+        <div class="small-12 columns hide-for-print">
+             <a name="anker-impressions"></a>
+            <h3>Impressions</h3>
+            
+            {% for n in (1..{{page.img-impression-count}}) %}  
+                {% if page.img-size %}
+                <img class="impressions hide-for-print" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-impression}}0{{n}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">
+                <noscript><img class="caption-media" itemprop="photo" src="{{site.baseurl}}/img/{{ page.img-impression }}0{{n}}-default.jpg"></noscript>
+                {% endif %}
+            {% endfor %}
+        </div>   
+             
+        <div class="small-12 columns hide-for-print">
+            {% if page.comments == true %}
+                <h3>Comment</h3>
+            {% endif %}  
+            {% include disqus.html %}
+        </div>
+
+    </div>
+</div>

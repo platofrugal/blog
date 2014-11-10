@@ -1,0 +1,7 @@
+{% for entry in site.data.nav-footer %}
+    {% if entry != null %}
+    <li>
+        <a href="{{ site.url }}{{ entry.href }}"> {{ entry.title }} </a>
+    </li>
+    {% endif %}
+{% endfor %}
