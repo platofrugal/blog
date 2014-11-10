@@ -6,7 +6,7 @@
 <script src="{{ site.baseurl }}/js/app.js"></script>
 
 
- <!-- TOP BAR -->
+    <!-- TOP BAR -->
     <script>
         function init() {
             window.addEventListener('scroll', function(e){
@@ -24,27 +24,25 @@
         }
         window.onload = init();
     </script>
-  {% if page.title == 'archive' %}  
+  {% if page.title ==  'archive' %}  
     <script>
     (function($) {
       $.fn.accordionAnimated = function() {
+
         var
           $accordion = this,
           $items = $accordion.find('> dd'),
           $targets = $items.find('.content'),
           options = {
-            active_class : 'active',
-            multi_expand: false,  
-            speed : 250,      
-            toggleable: true
             active_class : 'active',  
             multi_expand: false,    
             speed : 250,        
-            toggleable: true      
+            toggleable: true     
           }
         ;
+
         $.extend(options, Foundation.utils.data_options($accordion));
-        
+
         $items.each(function(i) {
           $(this).find('a:eq(0)').on('click.accordion', function() {
             if(!options.toggleable && $items.eq(0).hasClass(options.active_class)) {
@@ -85,7 +83,6 @@
     }());
     </script>
     -->
-    
     <!-- OWL CAROUSEL -->
     <script type="text/javascript">
         $(document).ready(function() {     
@@ -94,9 +91,15 @@
     </script>
     <script>
     $(document).ready(function() {
+     
     $("#owl-post").owlCarousel({
+     
         navigation : false,
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true
+
+    });
+     
+    });
     </script>
