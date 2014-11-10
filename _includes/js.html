@@ -34,10 +34,10 @@
           $items = $accordion.find('> dd'),
           $targets = $items.find('.content'),
           options = {
-            active_class : 'active',  // class for items when active
-            multi_expand: false,    // whether mutliple items can expand
-            speed : 250,        // speed of animation
-            toggleable: true      // setting to false only closes accordion panels when another is opened
+            active_class : 'active',  
+            multi_expand: false,    
+            speed : 250,        
+            toggleable: true      
           }
         ;
 
@@ -93,17 +93,18 @@
     <script>
     $(document).ready(function() {
     $("#owl-post").owlCarousel({
-        navigation : false, // Show next and prev buttons
+        navigation : false,
         slideSpeed : 300,
         paginationSpeed : 400,
         singleItem:true
-
-        // "singleItem:true" is a shortcut for:
-        // items : 1,
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false   
+      /*
+        "singleItem:true" is a shortcut for:
+        items : 1,
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false   
+      */
     });    
     });
     </script>
