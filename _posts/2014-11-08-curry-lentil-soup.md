@@ -26,7 +26,7 @@ ingredients:
         - 3-5 carrots
         - A handful of ginger
         - 1 Onion
-        - 1 tbsp Additive-free peanut butter
+        - 1 tbsp additive-free peanut butter
     Seasoning:
         - Gluten-free vegetable broth
         - Curry powder
@@ -42,7 +42,7 @@ instructions:
     2. (01 min): 
         - Wash the red lentils using a colander. Pour about 500ml of water into the pot and add the red lentils.
     3. (15min):
-        - Let simmer the soup. Chop the ginger into small pieces.
+        - Let simmer the soup. Add water if neccessary. Chop the ginger into small pieces.
     4. (01min):
         - Season with vegetable broth, curry, chili, peanut butter and ginger.
     3. (finished): 
