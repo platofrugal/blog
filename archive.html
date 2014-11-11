@@ -6,12 +6,10 @@ img-archive: archive-back
 
 img-tag: oatmeal-back
 
-img-gear:
-    - kettle-bell
-    - pull-up-bar
-    - block
-    - stairs
-    - nothing
+img-workout-gear: 
+    - archive-workout-pullup-back
+    - archive-workout-nothing-back
+    - archive-workout-ledge-back
 
 img-size:
     default: -default.jpg
@@ -117,8 +115,8 @@ img-size:
                         <div class="main">
                             {% assign postTitle = tag[1] | where: "category", "workout" | sort %}
                             {% if postTitle != empty %}
-   
-                                <div class="wrap sub" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-tag}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">
+                                
+                                <div class="wrap sub" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/archive-workout-{{ tag[0] }}-back{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">
                                     <h2>{{ tag[0] }}</h2>
                                 </div>
                                 <ul class="main gear">    

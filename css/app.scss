@@ -563,7 +563,8 @@ opacity: 1;
 }
 
 .wrap.sub h2 {
-    padding: 3em 0;
+    padding: 5em 0;
+    margin: 0;
 }
 .gear {
     padding: 3em 0;
@@ -636,17 +637,6 @@ img.impressions {
   POST - WORKOUT
 ============================================================ */
 
-
-.workout-shape {
-    color: white;
-    /*
-    background: none repeat scroll 0% 0% rgba($oil, 0.33);
-    */
-    border: 1px solid $body-bg;
-    margin-bottom: 100px;
-    display: inherit;
-    padding: 1em 0;
-}
 
 .break {
     background: url('../asset/img/1px.png') repeat-x scroll center center,
