@@ -56,9 +56,6 @@
 
 
 
-$chalk-color: #333333;
-
-
 body {
 /** To edit this background, follow this link:
 http://svgeneration.com/generate/Cross-Stripes?size=4&background=ffffff&stripe-width=2.58&stripe1=e0dacc&stripe2=f0eded&
@@ -110,6 +107,27 @@ h4, h5 {
     letter-spacing: 3px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+
+
+/* Effect 8: border slight translate */
+.about a {
+    padding: rem-calc(3) 0;
+    border-bottom: 1px dotted $oil;
+}
+.about a:hover, .about a:focus {
+    color: $body-font-color;
+    border-bottom: 1px solid $alert-color;
+}
+.about a::before,
+.about a::after  {
+    position: absolute;
+
+    content: '';
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
 
@@ -564,7 +582,7 @@ opacity: 1;
 
 .workout {
     padding-bottom: rem-calc(100);
-    background: none repeat scroll 0% 0% $chalk-color; 
+    background: none repeat scroll 0% 0% $oil; 
     color: $body-bg;
     h2, h5 {
     color: $body-bg;
@@ -622,7 +640,7 @@ img.impressions {
 .workout-shape {
     color: white;
     /*
-    background: none repeat scroll 0% 0% rgba($chalk-color, 0.33);
+    background: none repeat scroll 0% 0% rgba($oil, 0.33);
     */
     border: 1px solid $body-bg;
     margin-bottom: 100px;
@@ -767,16 +785,16 @@ footer ul li a {
 }
 
 /* ============================================================
-  RESPONSIVE TABLES
+  RESPONSIVE TABLE
 ============================================================ */
 
 
 // Breakpoints
-$bp-maggie: 15em; 
-$bp-lisa: 30em;
-$bp-bart: 48em;
-$bp-marge: 62em;
-$bp-homer: 75em;
+$bp-xs: 15em; 
+$bp-s: 30em;
+$bp-m: 48em;
+$bp-l: 62em;
+$bp-xl: 75em;
 
 // Styles
 * {
@@ -798,11 +816,11 @@ table {
   font-family: $header-font-family;
   border: 1px solid $body-font-color;
   /*
-  @media (min-width: $bp-bart) {
+  @media (min-width: $bp-m) {
     font-size: .9em; 
   }
   
-  @media (min-width: $bp-marge) {
+  @media (min-width: $bp-l) {
     font-size: 1em; 
   }
   */
@@ -817,7 +835,7 @@ table {
     width: 1px; 
     overflow: hidden;
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-m) {
       // Unhide <thead> on wide viewports
       position: relative;
       clip: auto;
@@ -827,9 +845,9 @@ table {
     }
     
     th {
-      background-color: rgba($chalk-color,1);
+      background-color: rgba($oil,1);
       /*
-      border: 1px solid rgba($chalk-color,1);
+      border: 1px solid rgba($oil,1);
       */
       font-weight: normal;
       text-align: center;
@@ -855,7 +873,7 @@ table {
   }
   
   tr {   
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-m) {
       // Undo display: block 
       display: table-row; 
     }
@@ -866,21 +884,21 @@ table {
     padding: .5em;
     vertical-align: middle;
     
-    @media (min-width: $bp-lisa) {
+    @media (min-width: $bp-s) {
       padding: .75em .5em; 
     }
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-m) {
       // Undo display: block 
       display: table-cell;
       padding: .5em;
     }
     
-    @media (min-width: $bp-marge) {
+    @media (min-width: $bp-l) {
       padding: .75em .5em; 
     }
     
-    @media (min-width: $bp-homer) {
+    @media (min-width: $bp-xl) {
       padding: .75em; 
     }
   }
@@ -891,13 +909,13 @@ table {
     font-weight: bold;
     text-align: center;
     
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-m) {
       font-size: 1.5em;
     }
   }
   
   tbody {
-    @media (min-width: $bp-bart) {
+    @media (min-width: $bp-m) {
       // Undo display: block 
       display: table-row-group; 
     }
@@ -906,9 +924,9 @@ table {
     /*
       margin-bottom: 1em;
     
-      border: 1px solid rgba($chalk-color,1);
+      border: 1px solid rgba($oil,1);
     */  
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-m) {
         // Undo display: block 
         display: table-row;
     /*
@@ -921,7 +939,7 @@ table {
       }
      /* 
       &:nth-of-type(even) {
-        @media (min-width: $bp-bart) {
+        @media (min-width: $bp-m) {
           background-color: rgba(94,93,82,.1);
         }
       }
@@ -929,10 +947,10 @@ table {
     }
     
     th[scope="row"] {
-      background-color: rgba($chalk-color,1);
+      background-color: rgba($oil,1);
       color: white;
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-m) {
         background-color: transparent;
        
         color: rgba($body-font-color,1);
@@ -944,11 +962,11 @@ table {
     td {
       text-align: right;
       /*
-      @media (min-width: $bp-lisa) {
-        border-bottom: 1px solid  rgba($chalk-color,1);
+      @media (min-width: $bp-s) {
+        border-bottom: 1px solid  rgba($oil,1);
       }
       */
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-m) {
         text-align: center; 
       }
     }
@@ -964,11 +982,11 @@ table {
       /*
       color: rgba(94,93,82,.75);
       */
-      @media (min-width: $bp-lisa) {
+      @media (min-width: $bp-s) {
         font-size: .9em; 
       }
       
-      @media (min-width: $bp-bart) {
+      @media (min-width: $bp-m) {
         // Don’t show data-title labels 
         content: none; 
       }
