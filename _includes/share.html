@@ -1,13 +1,15 @@
                 
 <div class="small-12 columns hide-for-print">
     <h3>Share</h3>        
-    <a href="https://www.facebook.com/sharer.php?s=100&p%5Burl%5D={{ canonical }}&p%5Bimages%5D%5B0%5D={{ site.url }}/{% if page.img-preview %}{{ page.img-preview }}{% else %}{{ site.image }}{% endif %}&p%5Btitle%5D={% if page.title %}{{ page.title | escape | replace:' ','%20' }}{% else %}{{ site.title | escape | replace:' ','%20' }}{% endif %}&p%5Bsummary%5D={% if description != empty %}{{ description | strip_html | condense_spaces | truncate:150 | replace:' ','%20' }}{% endif %}">
-        <i class="fa fa-facebook fa-3x share-button" title="Share on Facebook" alt="Facebook share button"></i>
+    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" alt="Facebook share button">
+        <i class="fa fa-facebook fa-3x share-button"></i>
     </a>
-     <a href="{{ site.pinterest }}">
+       
+    <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ site.url }}/{{ page.url }}&media={{ site.url }}/img/{{ page.img-preview }}-large.jpg&description={{ page.title }} - visit {{ site.url }}" class="pin-it-button" count-layout="horizontal">
         <i class="fa fa-pinterest fa-3x share-button"></i>
     </a>
-    <a href="{{ site.facebook }}">
+
+    <a target="_blank" href="https://twitter.com/share?text={{ page.title }}%20via%20@{{ site.twitter }}&url={{ site.url }}{{ page.url }}">
         <i class="fa fa-twitter fa-3x share-button"></i>
     </a>
 </div>

@@ -1,18 +1,12 @@
 
-- title: foodgawker
-  href: "#"
-
 - title: twitter
-  href: "#"
-
-- title: facebook
-  href: "#"
+  href: "https://twitter.com/platofrugal"
 
 - title: pinterest
-  href: "#"
+  href: "http://de.pinterest.com/platofrugal/"
   
 - title: instagram
-  href: "#"
+  href: "http://instagram.com/platofrugal"
   
 - title: e-mail
-  href: "#"
+  href: {{ site.email }}

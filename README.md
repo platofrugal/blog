@@ -1,6 +1,6 @@
 # Plato Frugal
 
-A food blog for modest clean eating.
+A food blog for modest and clean recipes.
 
 ## Requirements
 

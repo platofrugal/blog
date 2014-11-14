@@ -48,7 +48,7 @@
     <meta content="{{ site.title }}" property="og:site_name">
     <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
     <meta content="{% if page.category %}{{ page.category }}{% else %}website{% endif %}" property="og:type">
-    <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description">
+    <meta content="{% if page.tags %}tagged as: {{ page.tags | join: ', ' }}{% else %}{{ site.description }}{% endif %}" property="og:description">
     {% if page.url %}<meta content="{{ site.url }}{{ page.url }}" property="og:url">{% endif %}
     {% if page.date %}
     <meta content="{{ page.date | date_to_xmlschema }}" property="{{ page.category }}:published_time">
@@ -66,16 +66,14 @@
     {% endif %}
     
     <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="photo">
     <meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:creator" content="@creator_username">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-
-    {% if page.image %}
-    <meta name="twitter:image:src" content="{{ site.url }}/asset/img/{{ page.img-preview }}-default.jpg">
+    <meta name="twitter:description" content="{% if page.tags %}tagged as: {{ page.tags | join: ', ' }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.img-preview %}
+    <meta name="twitter:image" content="{{ site.url }}/img/{{ page.img-preview }}-large.jpg">
     {% else %}
-    <meta name="twitter:image:src" content="{{ site.url }}/{{ site.image }}">
+    <meta name="twitter:image" content="{{ site.url }}/{{ site.image }}">
     {% endif %}
 
 </head>

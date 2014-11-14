@@ -64,48 +64,37 @@
         </div>
     </div>
     <div class="row main">
-        <div class="medium-6 columns">
+        <div class="small-12 columns">
             <h3>Note</h3>
             <p>{{ page.note }}</p>
         </div>
-        <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" class="medium-6 columns">
+    </div>
+    <div class="row main">
+        <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" class="small-12 columns">
             <h3>Nutrition facts</h3>
             <table class="responsive-table table">
                 <thead>
                   <tr>
                     <th scope="col"></th>
-                    <th scope="col">per 100g</th>
+                    <th scope="col">Calories</th>
+                    <th itemprop="proteinContent" scope="col">Protein</th>
+                    <th itemprop="carbohydrateContent" scope="col">Total Carbs</th>
+                    <th itemprop="sugarContent" scope="col">Sugars</th>
+                    <th itemprop="fatContent" scope="col">Total Fat</th>
+                    <th itemprop="saturatedFatContent" scope="col">Saturated Fat</th>
+                    <th itemprop="fiberContent" scope="col">Fiber</th>
                   </tr>
                 </thead>
                 <tbody>
-
                  <tr>
-                    <th scope="row">Calories</th>
-                    <td itemprop="calories" data-title="per 100g">{{ page.calories }} kcal</td>
-                 </tr>
-                 <tr>
-                    <th itemprop="proteinContent" scope="row">Protein</th>
-                    <td data-title="per 100g">{{ page.protein }}g</td>
-                 </tr>
-                 <tr>
-                    <th itemprop="carbohydrateContent" scope="row">Total Carbs</th>
-                    <td data-title="per 100g">{{ page.total-carbs }}g</td>
-                 </tr>
-                 <tr>
-                    <th itemprop="sugarContent" scope="row">Sugars</th>
-                    <td data-title="per 100g">{{ page.sugars }}g</td>
-                 </tr>
-                 <tr>
-                    <th itemprop="fatContent" scope="row">Total Fat</th>
-                    <td data-title="per 100g">{{ page.total-fat }}g</td>                 
-                 </tr>  
-                 <tr>
-                    <th itemprop="saturatedFatContent" scope="row">Saturated Fat</th>
-                    <td data-title="per 100g">{{ page.saturated-fat }}g</td>
-                 </tr>
-                 <tr>
-                    <th itemprop="fiberContent" scope="row">Fiber</th>
-                    <td data-title="per 100g">{{ page.fiber }}g</td>
+                    <th scope="row">per 100g</th>
+                    <td scope="row" itemprop="calories" data-title="Calories">{{ page.calories }} kcal</td>
+                    <td scope="row" data-title="Protein">{{ page.protein }}g</td>
+                    <td scope="row" data-title="Total Carbs">{{ page.total-carbs }}g</td>
+                    <td data-title="Sugars">{{ page.sugars }}g</td>
+                    <td data-title="Total fat">{{ page.total-fat }}g</td>
+                    <td data-title="Saturated fat">{{ page.saturated-fat }}g</td>
+                    <td data-title="Fiber">{{ page.fiber }}g</td>
                  </tr>
                 </tbody> 
             </table>

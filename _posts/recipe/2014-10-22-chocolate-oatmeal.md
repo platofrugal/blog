@@ -1,7 +1,6 @@
 ---
 layout: default
 categories: recipe
-category: recipe
 
 title: Chocolate Oatmeal
 

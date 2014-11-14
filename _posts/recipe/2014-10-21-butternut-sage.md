@@ -1,12 +1,11 @@
 ---
 layout: default
 categories: recipe
-category: recipe
 
 title: Butternut squash and sage butter
 
 duration: 15 minutes
-vessel: 1 Pan
+vessel: Pan
 heat: Stove
 servings: 1
 tags: [gluten-free, dairy-free, meatless monday]
