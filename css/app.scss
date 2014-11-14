@@ -501,12 +501,12 @@ opacity: 1;
 .archive {
     background: none repeat scroll 0% 0% $body-bg;
 }
-
+/*
 .accordion .wrap h2 {
     line-height: 75px;
 }
 .accordion .wrap {
-    padding: 75px 0px;
+    padding: 50px;
 }
 .accordion .accordion-navigation > .content, .accordion dd > .content {
     padding: 0.9375rem 0 0;
@@ -533,23 +533,24 @@ opacity: 1;
     color: $body-bg;
     border: 1px solid $alert-color;
 }
+*/
 
-.tabs-content > .content {
-    padding: 0;
+dl.tabs {
+    padding: rem-calc(75) 0;
 }
 [class*="block-grid-"] > li {
     padding: 2rem 1rem 2rem;
 }
-
 .tabs dd > a, .tabs .tab-title > a {
     background: none repeat scroll 0% 0% rgba(0,0,0,0);
     color: $body-bg;
-    padding: 1rem;
+    padding: 2rem 0;
     margin: 0.5rem;
     font-family: $header-font-family;
-    font-size: 1rem;
+    font-size: 1.625em;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
     border: 1px solid $body-bg;
 }
 .tabs dd > a:hover, .tabs .tab-title > a:hover {
@@ -805,7 +806,10 @@ table {
   width: 100%;
   margin-top: 3em;
   font-family: $header-font-family;
+  font-weight: 300;
+  letter-spacing: 2px;
   border: 1px solid $body-font-color;
+  padding: rem-calc(20) 0;
   /*
   @media (min-width: $bp-m) {
     font-size: .9em; 
@@ -859,8 +863,6 @@ table {
     padding: 0;
     text-align: left;
     white-space: normal;
-    text-transform: uppercase;
-    letter-spacing: 2px;
   }
   
   tr {   

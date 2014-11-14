@@ -1,13 +1,13 @@
                 
 <div class="small-12 columns hide-for-print">
     <h3>Share</h3>        
-    <a href="{{ site.twitter }}">
-        <i class="fa fa-twitter fa-3x share-button"></i>
+    <a href="https://www.facebook.com/sharer.php?s=100&p%5Burl%5D={{ canonical }}&p%5Bimages%5D%5B0%5D={{ site.url }}/{% if page.img-preview %}{{ page.img-preview }}{% else %}{{ site.image }}{% endif %}&p%5Btitle%5D={% if page.title %}{{ page.title | escape | replace:' ','%20' }}{% else %}{{ site.title | escape | replace:' ','%20' }}{% endif %}&p%5Bsummary%5D={% if description != empty %}{{ description | strip_html | condense_spaces | truncate:150 | replace:' ','%20' }}{% endif %}">
+        <i class="fa fa-facebook fa-3x share-button" title="Share on Facebook" alt="Facebook share button"></i>
     </a>
      <a href="{{ site.pinterest }}">
         <i class="fa fa-pinterest fa-3x share-button"></i>
     </a>
     <a href="{{ site.facebook }}">
-        <i class="fa fa-facebook fa-3x share-button"></i>
+        <i class="fa fa-twitter fa-3x share-button"></i>
     </a>
 </div>

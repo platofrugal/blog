@@ -14,14 +14,12 @@ categories: blog
             {% endif %}
                 
                 <div class="caption-overlay">
-                    <figcaption>
-                    {% if post.category != empty %}
-                        <h3><span class="caption-title">{{ post.category }}</span></h3>
-                        {% if post.category == 'workout' %}
-                            <span class="caption-italic">requires</span></br>
-                        {% elsif post.category == 'recipe' %}
-                            <span class="caption-italic">tagged as</span></br>       
-                        {% endif %}
+                     <figcaption>
+                    {% if post.duration %}
+                        <h3><span class="caption-title">{{ post.duration }}</span></h3>
+                    {% endif %} 
+                    {% if post.categories != empty %} 
+                        <span class="caption-italic">tagged as</span></br>       
                     {% endif %}
                         <h4 class="caption-tags">                  
                         {% if post.tags %}

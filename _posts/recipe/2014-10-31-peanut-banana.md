@@ -11,6 +11,14 @@ heat: []
 servings: 1
 tags: [gluten-free, dairy-free, meatless monday, snack]
 
+calories: 
+protein: 
+total-carbs: 
+sugars: 
+total-fat:
+saturated-fat: 
+fiber: 
+
 img-preview: peanut-banana01
 img-background: peanut-banana-back
 img-impression: peanut-banana

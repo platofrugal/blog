@@ -11,6 +11,14 @@ heat: []
 servings: 1
 tags: [gluten-free, meatless monday, snack]
 
+calories: 
+protein: 
+total-carbs: 
+sugars: 
+total-fat:
+saturated-fat: 
+fiber: 
+
 img-preview: tomatoe-mozzarella02
 img-background: tomatoe-mozzarella-back
 img-impression: tomatoe-mozzarella

@@ -10,8 +10,10 @@ layout: compress
         <div id="padding-top">         
             <div {% if page.title == 'archive' or page.title == 'about' or page.title == 'disclaimer' %} class="main {{ page.title }}"{% endif %}>           
                 {{ content }}       
-            </div>               
-        {% include related-posts.html %}    
+            </div> 
+        {% if page.title != 'archive' and page.title != 'about' and page.title != 'disclaimer' %}              
+            {% include related-posts.html %}   
+        {% endif %} 
         </div>  
         {% if page.title != 'archive' %}             
             {% include footer.html %}

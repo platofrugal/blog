@@ -11,6 +11,14 @@ heat: hotplate
 servings: 2
 tags: [dairy-free, gluten-free, meatless monday, refined sugar-free]
 
+calories: 
+protein: 
+total-carbs: 
+sugars: 
+total-fat:
+saturated-fat: 
+fiber: 
+
 img-preview: curry-lentil-soup02
 img-background: curry-lentil-soup-back
 img-impression: curry-lentil-soup

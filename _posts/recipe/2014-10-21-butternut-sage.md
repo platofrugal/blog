@@ -11,6 +11,14 @@ heat: Stove
 servings: 1
 tags: [gluten-free, dairy-free, meatless monday]
 
+calories: 
+protein: 
+total-carbs: 
+sugars: 
+total-fat:
+saturated-fat: 
+fiber: 
+
 img-preview: butternut-sage01
 img-background: butternut-sage-back
 img-impression: butternut-sage
@@ -19,7 +27,6 @@ img-impression-count: 2
 img-size:
     default: -default.jpg
     large: -large.jpg
-    
     
 ingredients:
     Main:

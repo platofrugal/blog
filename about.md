@@ -6,14 +6,14 @@ categories: about
 
 ##ABOUT
 
-This site is based on the on Jekyll and hosted on <a target="_blank" rel="license" href="http://github.com/platofrugal">github</a>.
+This site is based on Jekyll and hosted on [github](http://github.com/platofrugal){:target="_blank"}.
 
 ###THIS PART IS UNDER CONSTRUCTION.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra
 mollis fringilla. Mauris sapien urna, cursus luctus consequat at, varius ut
 ipsum. Etiam neque diam, consectetur et pellentesque et, vulputate in est.
-Curabitur sed erat risus. <a target="_blank" rel="license" href="http://github.com/platofrugal">github</a>. Lorem ipsum dolor sit amet, consectetur adipiscing
+Curabitur sed erat risus. Lorem ipsum dolor sit amet, consectetur adipiscing
 elit. Praesent ullamcorper eros non lorem venenatis quis ultricies diam
 tincidunt. Duis vestibulum luctus diam vel mattis. Aliquam in massa et tortor
 sodales placerat vel eu mi. Integer tincidunt lectus id lacus fermentum

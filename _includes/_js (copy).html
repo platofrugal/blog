@@ -1,0 +1,105 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/bower_components/foundation/js/foundation.min.js"></script>
+<script src="{{ site.baseurl }}/bower_components/classie/classie.js"></script>
+<script src="{{ site.baseurl }}/bower_components/salvattore/dist/salvattore.min.js"></script>
+<script src="{{ site.baseurl }}/bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+<script src="{{ site.baseurl }}/js/app.js"></script>
+
+
+    <!-- TOP BAR -->
+    <script>
+        function init() {
+            window.addEventListener('scroll', function(e){
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 150,
+                    header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
+  {% if page.title ==  'archive' %}  
+    <script>
+    (function($) {
+      $.fn.accordionAnimated = function() {
+
+        var
+          $accordion = this,
+          $items = $accordion.find('> dd'),
+          $targets = $items.find('.content'),
+          options = {
+            active_class : 'active',  
+            multi_expand: false,    
+            speed : 250,        
+            toggleable: true     
+          }
+        ;
+
+        $.extend(options, Foundation.utils.data_options($accordion));
+
+        $items.each(function(i) {
+          $(this).find('a:eq(0)').on('click.accordion', function() {
+            if(!options.toggleable && $items.eq(0).hasClass(options.active_class)) {
+              return;
+            }
+
+            $targets.eq(i)
+              .stop(true, true)
+              .slideToggle(options.speed);
+
+            if(!options.multi_expand) {
+              $targets.not(':eq('+i+')')
+                .stop(true, true)
+                .slideUp(options.speed);
+            }
+          });
+        });
+      };
+    }(jQuery)); 
+    </script>
+    <script>
+    $('.accordion').accordionAnimated(); 
+    </script>
+    {% endif %}
+    
+    <!-- COMMENT COUNT DISQUS -->
+    <!--
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'platofrugal'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    -->
+    <!-- OWL CAROUSEL -->
+    <script type="text/javascript">
+        $(document).ready(function() {     
+            $(".owl-related-posts").owlCarousel(); 
+        });
+    </script>
+    <script>
+    $(document).ready(function() {
+     
+    $("#owl-post").owlCarousel({
+     
+        navigation : false,
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+
+    });
+     
+    });
+    </script>

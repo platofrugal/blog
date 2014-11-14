@@ -17,6 +17,9 @@
 <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+
     <!-- WEBFONTS -->
     <link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,300|Montserrat:400,700|Satisfy' rel='stylesheet' type='text/css'>
     <!-- FAVICON -->
@@ -39,35 +42,22 @@
     <!-- FB NAMESPACE DEFINITION -->
     <html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 
+    <meta http-equiv="cleartype" content="on">
     
     <!-- FB OPEN GRAPH -->
     <meta content="{{ site.title }}" property="og:site_name">
-    {% if page.title %}
-      <meta content="{{ page.title }}" property="og:title">
-    {% else %}
-      <meta content="{{ site.title }}" property="og:title">
-    {% endif %}
-    {% if page.category %}
-      <meta content="{{ page.category }}" property="og:type">
-    {% else %}
-      <meta content="website" property="og:type">
-    {% endif %}
-    {% if page.description %}
-      <meta content="{{ page.description }}" property="og:description">
-    {% else %}
-      <meta content="{{ site.description }}" property="og:description">
-    {% endif %}
-    {% if page.url %}
-      <meta content="{{ site.url }}{{ page.url }}" property="og:url">
-    {% endif %}
+    <meta content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" property="og:title">
+    <meta content="{% if page.category %}{{ page.category }}{% else %}website{% endif %}" property="og:type">
+    <meta content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" property="og:description">
+    {% if page.url %}<meta content="{{ site.url }}{{ page.url }}" property="og:url">{% endif %}
     {% if page.date %}
-      <meta content="{{ page.date | date_to_xmlschema }}" property="{{ page.category }}:published_time">
-      <meta content="{{ site.url }}/about/" property="{{ page.category }}:author">
+    <meta content="{{ page.date | date_to_xmlschema }}" property="{{ page.category }}:published_time">
+    <meta content="{{ site.url }}/about/" property="{{ page.category }}:author">
     {% endif %}
     {% if page.img-preview %}
-      <meta content="{{ site.url }}/img/{{ page.img-preview }}-default.jpg" property="og:image">
+    <meta content="{{ site.url }}/img/{{ page.img-preview }}-large.jpg" property="og:image">
     {% else %}
-      <!-- FALLBACK IMAGE -->
+    <meta content="{{ site.url }}/{{ site.image }}" property="og:image">
     {% endif %}
     {% if page.tags %}
       {% for tag in page.tags %}
@@ -79,24 +69,13 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.twitter }}">
     <meta name="twitter:creator" content="@creator_username">
-    {% if page.title %}
-      <meta name="twitter:title" content="{{ page.title }}">
-    {% else %}
-      <meta name="twitter:title" content="{{ site.title }}">
-    {% endif %}
-    {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    {% endif %}
-    {% if page.description %}
-      <meta name="twitter:description" content="{{ page.description }}">
-    {% else %}
-      <meta name="twitter:description" content="{{ site.description }}">
-    {% endif %}
-    {% if page.image %}
-      <meta name="twitter:image:src" content="{{ site.url }}/asset/img/{{ page.img-preview }}-default.jpg">
-    {% else %}
-      <!-- FALLBACK IMAGE -->
-    {% endif %}
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
+    {% if page.image %}
+    <meta name="twitter:image:src" content="{{ site.url }}/asset/img/{{ page.img-preview }}-default.jpg">
+    {% else %}
+    <meta name="twitter:image:src" content="{{ site.url }}/{{ site.image }}">
+    {% endif %}
 
 </head>

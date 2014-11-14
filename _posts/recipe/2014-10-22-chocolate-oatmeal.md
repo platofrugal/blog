@@ -3,13 +3,21 @@ layout: default
 categories: recipe
 category: recipe
 
-title: Oatmeal
+title: Chocolate Oatmeal
 
 duration: 2 minutes
 vessel: 1 deep dish
 heat: tap or water heater
 servings: 1
 tags: [dairy-free, meatless monday, refined sugar-free]
+
+calories: 
+protein: 
+total-carbs: 
+sugars: 
+total-fat:
+saturated-fat: 
+fiber: 
 
 img-preview: oatmeal02
 img-background: oatmeal-back
@@ -24,9 +32,9 @@ ingredients:
     Main:
         - 1 cup of delicate oat flakes
         - 1 banana
+        - 1 tbsp of cocoa powder
         - Warm water
     Optional:
-        - 2 tbsp of cocoa powder
         - 2 tbsp of ground almonds
   
 instructions:
