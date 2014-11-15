@@ -63,14 +63,20 @@
             {% endfor %}         
         </div>
     </div>
+    
     <div class="row main">
         <div class="small-12 columns">
             <h3>Note</h3>
             <p>{{ page.note }}</p>
         </div>
     </div>
+
     <div class="row main">
+       <i class="fa fa-angle-down fa-3x angle-down"></i> <br>
+    <a class="button" href="#" data-reveal-id="modalNutrition">Nutrition facts</a> 
+        <div id="modalNutrition" class="reveal-modal" data-reveal> 
         <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" class="small-12 columns">
+            
             <h3>Nutrition facts</h3>
             <table class="responsive-table table">
                 <thead>
@@ -98,9 +104,13 @@
                  </tr>
                 </tbody> 
             </table>
-            
         </div>
+    <a class="close-reveal-modal">&#215;</a> 
+    </div>
+       
+
     </div> 
+    
     <div class="row main">
         <div class="small-12 columns">
             {% include share.html %}

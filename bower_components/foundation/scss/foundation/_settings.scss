@@ -398,8 +398,8 @@ $accordion-navigation-font-family: $header-font-family;
 // $alert-radius: $global-radius;
 
 // We use this to control transition effects
-// $alert-transition-speed: 300ms;
-// $alert-transition-ease: ease-out;
+$alert-transition-speed: 100ms;
+$alert-transition-ease: ease-out;
 
 // 03. Block Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
