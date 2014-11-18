@@ -10,7 +10,7 @@ categories: blog
         <a class="" href="{{ site.baseurl }}{{ post.url }}">
             <figure class="caption embed">
             {% if post.img-size %}
-                <img class="caption-media" data-interchange="{% for size in post.img-size %}[{{site.baseurl}}/img/{{post.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">              
+                <img type="image/jpg" class="caption-media" data-interchange="{% for size in post.img-size %}[{{site.baseurl}}/img/{{post.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">              
             {% endif %}
                 
                 <div class="caption-overlay">

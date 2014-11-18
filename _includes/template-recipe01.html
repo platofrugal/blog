@@ -1,7 +1,7 @@
 
 <div itemscope itemtype="http://schema.org/Recipe">
     {% if page.img-size %}
-    <div class="wrap hide-for-print" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-background}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">             
+    <div class="wrap hide-for-print" type="image/jpg" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-background}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">             
     {% endif %}
         <div class="row">
             <div class="medium-6 columns">
@@ -32,7 +32,7 @@
             </div>        
             <div class="medium-6 columns">
                 {% if page.img-size %}
-                <a href="#anker-impressions"><div class="img-wrap" itemprop="image" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}"></div></a>              
+                <a href="#anker-impressions"><div class="img-wrap" type="image/jpg" itemprop="image" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-preview}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}"></div></a>              
                 {% endif %}
             </div>
         </div>
@@ -121,7 +121,7 @@
             
             {% for n in (1..{{page.img-impression-count}}) %}  
                 {% if page.img-size %}
-                <img class="impressions hide-for-print" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-impression}}0{{n}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">
+                <img class="impressions hide-for-print" type="image/jpg" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-impression}}0{{n}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">
                 <noscript><img class="caption-media" itemprop="photo" src="{{site.baseurl}}/img/{{ page.img-impression }}0{{n}}-default.jpg"></noscript>
                 {% endif %}
             {% endfor %}
