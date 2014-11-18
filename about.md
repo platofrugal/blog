@@ -1,7 +1,6 @@
 ---
-title: about
+title: About
 layout: default
-categories: about
 ---
 
 ##ABOUT

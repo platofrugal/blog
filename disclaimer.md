@@ -1,6 +1,6 @@
 ---
 layout: default
-title: disclaimer
+title: Disclaimer
 ---
 
 

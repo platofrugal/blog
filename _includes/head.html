@@ -9,8 +9,16 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css">
   <script src="{{ site.baseurl }}/bower_components/modernizr/modernizr.js"></script>
   
-  <title>{% if page.title %}{{ page.title | upcase }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.tags %}{{ page.tags | join: ', '}}{% else %}{{ site.description }}{% endif %}">
+  <title>   
+    {% if page.title %}
+        {% if page.title != 'blog' %}
+            {{ site.title }} - {{ page.title }}
+        {% else %}
+            {{ site.title }} - {{ site.description }} 
+        {% endif %}
+    {% endif %}
+  </title>
+  <meta name="description" content="{% if site.description %}{{ site.description }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
