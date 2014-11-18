@@ -22,7 +22,7 @@ img-size:
                 <div class="small-12 columns">
                     <!-- ACCORDION AND TAB MENU -->
                     <dl class="tabs" data-tab>
-                        <dd class="medium-6 columns"><a href="#panel-tag">BY TAG</a></dd>
+                        <dd class="medium-6 columns active"><a href="#panel-tag">BY TAG</a></dd>
                         <dd class="medium-6 columns"><a href="#panel-date">BY DATE</a></dd>
                     </dl>
                 </div> 
@@ -34,12 +34,7 @@ img-size:
 <!-- TAB CONTENT -->
 
     <div class="tabs-content">
-        <div class="content main active" id="panelstart">
-            <h1><i class="fa fa-filter fa-lg"></i></h1>
-            <h1>CHOOSE A FILTER METHOD</h1>
-        </div>
-        
-        <div class="content" id="panel-tag">
+        <div class="content active" id="panel-tag">
             {% assign sortedTags = site.tags | sort %}
             {% for tag in sortedTags %}
             <div class="main">
