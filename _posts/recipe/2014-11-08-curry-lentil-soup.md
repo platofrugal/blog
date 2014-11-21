@@ -19,15 +19,10 @@ total-fat:
 saturated-fat: 
 fiber: 
 
-img-preview: curry-lentil-soup02
-img-background: curry-lentil-soup-back
-img-impression: curry-lentil-soup
-img-impression-count: 4
+img: curry-lentil
+img-preview: curry-lentil-02
+img-count: 4
 
-img-size:
-    default: -default.jpg
-    large: -large.jpg
-    
 ingredients:
     Main:
         - 250g red lentils

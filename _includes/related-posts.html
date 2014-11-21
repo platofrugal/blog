@@ -1,5 +1,13 @@
 {% if page.img-size %}
-    <div class="wrap-bottom hide-for-print" data-interchange="{% for size in page.img-size %}[{{ site.baseurl }}/img/{{page.img-background}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}"> 
+    <div class="wrap-bottom" 
+        type="image/jpg" 
+        data-interchange="[{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-480w.jpg, (only screen and (min-width: 1px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-768w.jpg, (only screen and (min-width: 481px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-1024w.jpg, (only screen and (min-width: 769px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-1440w.jpg, (only screen and (min-width: 1025px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-1600w.jpg, (only screen and (min-width: 1441px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.img}}-back-1920w.jpg, (only screen and (min-width: 1601px))]">
+        
         <div class="footer-posts" role="contentinfo">
             <div class="large-12 columns">
                 {% if page.categories != empty %}

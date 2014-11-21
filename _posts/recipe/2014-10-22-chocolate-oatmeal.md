@@ -18,15 +18,11 @@ total-fat:
 saturated-fat: 
 fiber: 
 
-img-preview: oatmeal02
-img-background: oatmeal-back
-img-impression: oatmeal
-img-impression-count: 2
+img: oatmeal
+img-preview: oatmeal-02
+img-count: 2
 
-img-size:
-    default: -default.jpg
-    large: -large.jpg
-    
+
 ingredients:
     Main:
         - 1 cup of delicate oat flakes

@@ -355,7 +355,6 @@ background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53
 }
 .preview, .preview:visited {
     margin: 0.3rem;
-    padding: 0.5rem;
     background: none repeat scroll 0% 0% rgba($body-bg, 1);
     text-align: center;
 }
@@ -373,6 +372,17 @@ margin-bottom: 0;
 .preview ul {
     margin: 0 auto;
 }
+.preview img {
+    border: 1px solid $secondary-color;
+    padding: 4px;
+}
+.preview img:hover, .preview img:active, .preview img:focus {
+border: 5px solid $alert-color;
+    padding: 0px;
+}
+
+
+
 
 /* ============================================================
   GRAYSCALE *NOT USED*
@@ -1001,6 +1011,18 @@ table {
       }
     } 
   }
+}
+
+
+
+/* ============================================================
+   
+============================================================ */
+
+.img-responsive{
+    width:100%;
+    outline:#aaa;
+    background:#ccc url(../img/loader.gif) center center no-repeat;
 }
 
 /* ============================================================

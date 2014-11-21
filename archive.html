@@ -16,8 +16,17 @@ img-size:
     large: -large.jpg
     
 ---
-    <div class="wrap" data-interchange="{% for size in page.img-size %}[{{site.baseurl}}/img/{{page.img-archive}}{{size[1]}} ({{size[0]}})]{% unless forloop.last %}, {% endunless %}{% endfor %}">             
-        <div class="diagonal-stripes">                               
+    <div class="wrap" 
+        type="image/jpg" 
+        data-interchange="[{{site.baseurl}}/img/{{page.title | downcase }}/{{page.title | downcase }}-480w.jpg, (only screen and (min-width: 1px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.title | downcase }}/{{page.title | downcase }}-768w.jpg, (only screen and (min-width: 481px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.title | downcase }}/{{page.title | downcase }}-1024w.jpg, (only screen and (min-width: 769px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.title | downcase }}/{{page.title | downcase }}-1440w.jpg, (only screen and (min-width: 1025px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.title | downcase }}/{{page.title | downcase }}-1600w.jpg, (only screen and (min-width: 1441px))],
+        [{{site.baseurl}}/img/{{page.img}}/{{page.title | downcase }}/{{page.title | downcase }}-1920w.jpg, (only screen and (min-width: 1601px))]">
+    
+    
+                                     
             <div class="row main">
                 <div class="small-12 columns">
                     <!-- ACCORDION AND TAB MENU -->
@@ -27,7 +36,7 @@ img-size:
                     </dl>
                 </div> 
             </div>   
-        </div>
+        
     </div>
 
 

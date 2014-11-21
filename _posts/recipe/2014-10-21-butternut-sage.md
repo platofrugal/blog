@@ -18,14 +18,9 @@ total-fat:
 saturated-fat: 
 fiber: 
 
-img-preview: butternut-sage01
-img-background: butternut-sage-back
-img-impression: butternut-sage
-img-impression-count: 2
-
-img-size:
-    default: -default.jpg
-    large: -large.jpg
+img: butter-sage
+img-preview: butter-sage-01
+img-count: 2
     
 ingredients:
     Main:

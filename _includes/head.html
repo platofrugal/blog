@@ -11,6 +11,9 @@
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css"/>
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.min.css"/>  
   <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/app.css">
+  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/animate.min.css">
+  <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/bower_components/BttrLazyLoading/dist/bttrlazyloading.min.css">
+  
   <!-- WEBFONTS -->
   <link href='http://fonts.googleapis.com/css?family=Neuton:400,400italic,300|Montserrat:400,700|Satisfy' rel='stylesheet' type='text/css'>
   
@@ -18,7 +21,24 @@
   <script type="application/javascript" src="{{ site.baseurl }}/bower_components/modernizr/modernizr.js"></script>
   -->
   <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  
+    <!-- polyfill responsive images: https://github.com/aFarkas/respimage -->
+    <script src="{{ site.baseurl }}/bower_components/respimage/respimage.min.js" async=""></script>
+    
+    <script>
+        document.createElement('picture');
+    </script>
+    
+    <script>
+
+        window.lazySizesConfig = {
+            // uncomment next line to preload after onload (often recommended)
+            preloadAfterLoad: true
+            //clearAttr: true
+        };
+    </script>
+    <script type="application/javascript" src="{{ site.baseurl }}/bower_components/lazysizes/lazysizes.js"></script>
+    
+    
   <title>   
     {% if page.title %}
         {% if page.title != 'blog' %}
@@ -71,7 +91,7 @@
     <meta content="{{ site.url }}/about/" property="{{ page.category }}:author">
     {% endif %}
     {% if page.img-preview %}
-    <meta content="{{ site.url }}/img/{{ page.img-preview }}-large.jpg" property="og:image">
+    <meta content="{{ site.url }}/img/{{ page.img-preview }}-970w.jpg" property="og:image">
     {% else %}
     <meta content="{{ site.url }}/{{ site.image }}" property="og:image">
     {% endif %}
@@ -87,7 +107,7 @@
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.tags %}tagged as: {{ page.tags | join: ', ' }}{% else %}{{ site.description }}{% endif %}">
     {% if page.img-preview %}
-    <meta name="twitter:image" content="{{ site.url }}/img/{{ page.img-preview }}-large.jpg">
+    <meta name="twitter:image" content="{{ site.url }}/img/{{ page.img-preview }}-970w.jpg">
     {% else %}
     <meta name="twitter:image" content="{{ site.url }}/{{ site.image }}">
     {% endif %}
