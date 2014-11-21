@@ -1,7 +1,6 @@
 ---
 layout: default
 categories: recipe
-category: recipe
 
 title: Banana with peanut butter
 

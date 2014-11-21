@@ -28,7 +28,13 @@
                             {% if sameTagCount >= 2 %}
                                 <div>   
                                     <a href="{{ site.baseurl }}{{ post.url }}">
-                                        <img class="related-post-preview" src="{{ site.baseurl }}/img/{{post.img-preview}}-default.jpg">
+                                        <img data-sizes="auto"
+                                            class="lazyload related-post-preview" 
+                                            src="{{site.baseurl}}/img/{{post.img}}/{{post.img-preview}}-240w.jpg"
+                                            data-srcset="{{site.baseurl}}/img/{{post.img}}/{{post.img-preview}}-240w.jpg 240w,
+                                            {{site.baseurl}}/img/{{post.img}}/{{post.img-preview}}-320w.jpg 320w,
+                                            {{site.baseurl}}/img/{{post.img}}/{{post.img-preview}}-500w.jpg 500w"
+                                            alt="{{ post.title }}" />
                                         <h5>{{ post.title }}</h5>
                                     </a>
                                     <!-- DISPLAY TAGS 
