@@ -49,5 +49,5 @@ sit amet nisl. Donec vel tellus et lacus iaculis luctus. Proin tempus
 venenatis lorem sagittis vulputate. Morbi non arcu tortor. In hac habitasse
 platea dictumst.
 
-
+{: .row}
 

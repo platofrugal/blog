@@ -803,11 +803,20 @@ footer ul li a {
 ============================================================ */
 .nutrition {
     border: 1px solid $body-font-color;
-    margin: 0.1em;
+    margin-top: 3em;  
 }
 .nutrition-head {
-    border-bottom: 1px solid $body-font-color;
-    padding: 2em;    
+    border-bottom: 1px solid $body-font-color; 
+   
+}
+.nutrition-head h3 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.nutrition-head .sublist-italic {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 4em;
 }
 .nutrition-body {
     font-size: rem-calc(18);
