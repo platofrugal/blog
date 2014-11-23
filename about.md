@@ -5,7 +5,7 @@ layout: default
 
 ##ABOUT
 
-This site is based on Jekyll and hosted on [github](http://github.com/platofrugal){:target="_blank"}.
+This site is based on Jekyll and hosted on [github](http://github.com/platofrugal){:target="_blank"}{: .external-link}.
 
 ###THIS PART IS UNDER CONSTRUCTION.
 

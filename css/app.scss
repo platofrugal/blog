@@ -71,11 +71,8 @@ p {
     letter-spacing: 0.3px;
 }
 .italic {
-    font-family: $body-font-family;
     font-style: italic;
     font-size: 0.875rem;
-    text-transform: none;
-    font-weight: normal;
     letter-spacing: 2px;
 }
 .serif {
@@ -112,18 +109,17 @@ h4, h5 {
 
 
 /* Effect 8: border slight translate */
-.about a {
+a.external-link  {
     padding: rem-calc(3) 0;
     border-bottom: 1px dotted $oil;
 }
-.about a:hover, .about a:focus {
+a.external-link:hover, a.external-link:focus {
     color: $body-font-color;
     border-bottom: 1px solid $alert-color;
 }
-.about a::before,
-.about a::after  {
+a.external-link::before,
+a.external-link::after  {
     position: absolute;
-
     content: '';
     -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
     -moz-transition: -moz-transform 0.3s, opacity 0.3s;
@@ -805,214 +801,18 @@ footer ul li a {
 /* ============================================================
   RESPONSIVE TABLE
 ============================================================ */
-
-
-// Breakpoints
-$bp-xs: 15em; 
-$bp-s: 30em;
-$bp-m: 48em;
-$bp-l: 62em;
-$bp-xl: 75em;
-
-// Styles
-* {
- @include box-sizing(border-box);
- 
- &:before,
- &:after {
-   @include box-sizing(border-box);
- }
+.nutrition {
+    border: 1px solid $body-font-color;
+    margin: 0.1em;
 }
-
-table {
-    border: none;
+.nutrition-head {
+    border-bottom: 1px solid $body-font-color;
+    padding: 2em;    
 }
-
-.responsive-table {
-  width: 100%;
-  margin-top: 3em;
-  font-family: $header-font-family;
-  font-weight: 300;
-  letter-spacing: 2px;
-  border: 1px solid $body-font-color;
-  padding: rem-calc(20) 0;
-  /*
-  @media (min-width: $bp-m) {
-    font-size: .9em; 
-  }
-  
-  @media (min-width: $bp-l) {
-    font-size: 1em; 
-  }
-  */
-  thead {
-    // Accessibly hide <thead> on narrow viewports
-    position: absolute;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0;
-    border: 0;
-    height: 1px; 
-    width: 1px; 
-    overflow: hidden;
-    
-    @media (min-width: $bp-m) {
-      // Unhide <thead> on wide viewports
-      position: relative;
-      clip: auto;
-      height: auto;
-      width: auto;
-      overflow: auto;
-    }
-    
-    th {
-      background-color: rgba($oil,1);
-      /*
-      border: 1px solid rgba($oil,1);
-      */
-      font-weight: normal;
-      text-align: center;
-      color: white;
-      
-      &:first-of-type {
-        text-align: left; 
-      }
-    }
-  }
-  
-  // Set these items to display: block for narrow viewports
-  tbody,
-  tr,
-  th,
-  td {
-    display: block;
-    padding: 0;
-    text-align: left;
-    white-space: normal;
-  }
-  
-  tr {   
-    @media (min-width: $bp-m) {
-      // Undo display: block 
-      display: table-row; 
-    }
-  }
-  
-  th,
-  td {
-    padding: .5em;
-    vertical-align: middle;
-    
-    @media (min-width: $bp-s) {
-      padding: .75em .5em; 
-    }
-    
-    @media (min-width: $bp-m) {
-      // Undo display: block 
-      display: table-cell;
-      padding: .5em;
-    }
-    
-    @media (min-width: $bp-l) {
-      padding: .75em .5em; 
-    }
-    
-    @media (min-width: $bp-xl) {
-      padding: .75em; 
-    }
-  }
-  
-  caption {
-    margin-bottom: 1em;
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    
-    @media (min-width: $bp-m) {
-      font-size: 1.5em;
-    }
-  }
-  
-  tbody {
-    @media (min-width: $bp-m) {
-      // Undo display: block 
-      display: table-row-group; 
-    }
-    
-    tr {
-    /*
-      margin-bottom: 1em;
-    
-      border: 1px solid rgba($oil,1);
-    */  
-      @media (min-width: $bp-m) {
-        // Undo display: block 
-        display: table-row;
-    /*
-        border-width: 1px;
-    */
-      }
-      
-      &:last-of-type {
-        margin-bottom: 0; 
-      }
-     /* 
-      &:nth-of-type(even) {
-        @media (min-width: $bp-m) {
-          background-color: rgba(94,93,82,.1);
-        }
-      }
-     */
-    }
-    
-    th[scope="row"] {
-      background-color: rgba($oil,1);
-      color: white;
-      
-      @media (min-width: $bp-m) {
-        background-color: transparent;
-       
-        color: rgba($body-font-color,1);
-       
-        text-align: left;
-      }
-    }
-    
-    td {
-      text-align: right;
-      /*
-      @media (min-width: $bp-s) {
-        border-bottom: 1px solid  rgba($oil,1);
-      }
-      */
-      @media (min-width: $bp-m) {
-        text-align: center; 
-      }
-    }
-    
-    td[data-type=currency] {
-      text-align: right; 
-    }
-    
-    td[data-title]:before {
-      content: attr(data-title);
-      float: left;
-      font-size: .8em;
-      /*
-      color: rgba(94,93,82,.75);
-      */
-      @media (min-width: $bp-s) {
-        font-size: .9em; 
-      }
-      
-      @media (min-width: $bp-m) {
-        // Don’t show data-title labels 
-        content: none; 
-      }
-    } 
-  }
+.nutrition-body {
+    font-size: rem-calc(18);
+    padding: 1em;
 }
-
 
 
 /* ============================================================

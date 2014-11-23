@@ -52,6 +52,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // This is the default html and body font-size for the base rem value.
+
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
@@ -131,7 +132,7 @@ $alert-color: #E5554E;
 // $body-bg: $white;
 $body-bg: rgb(245,245,245);
 // $body-font-color: $jet;
-$body-font-color: rgb(54,60,64);
+$body-font-color: rgba(45, 49, 52, 1);
 $body-font-family: 'Neuton', serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
