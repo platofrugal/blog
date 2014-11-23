@@ -105,31 +105,31 @@
                             <div class="small-6 columns text-left"></div>
                             <div class="small-6 columns text-right"><span class="italic">per 100g</span></div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="calories" class="row">
                             <div class="small-6 columns text-left">Calories</div>
                             <div class="small-6 columns text-right">{{ page.calories-excl }} kcal</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="proteinContent" class="row">
                             <div class="small-6 columns text-left">Protein</div>
                             <div class="small-6 columns text-right">{{ page.protein-excl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="carbohydrateContent" class="row">
                             <div class="small-6 columns text-left">Total Carbs</div>
                             <div class="small-6 columns text-right">{{ page.total-carbs-excl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="sugarContent" class="row">
                             <div class="small-6 columns text-left">Sugars</div>
                             <div class="small-6 columns text-right">{{ page.sugars-excl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="fatContent" class="row">
                             <div class="small-6 columns text-left">Total fat</div>
                             <div class="small-6 columns text-right">{{ page.total-fat-excl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="saturatedFatContent" class="row">
                             <div class="small-6 columns text-left">Saturated fat</div>
                             <div class="small-6 columns text-right">{{ page.saturated-fat-excl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="fiberContent" class="row">
                             <div class="small-6 columns text-left">Fiber</div>
                             <div class="small-6 columns text-right">{{ page.fiber-excl }} g</div>        
                         </div>
@@ -146,31 +146,31 @@
                             <div class="small-6 columns text-left"></div>
                             <div class="small-6 columns text-right"><span class="italic">per 100g</span></div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="calories" class="row">
                             <div class="small-6 columns text-left">Calories</div>
                             <div class="small-6 columns text-right">{{ page.calories-incl }} kcal</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="proteinContent" class="row">
                             <div class="small-6 columns text-left">Protein</div>
                             <div class="small-6 columns text-right">{{ page.protein-incl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="carbohydrateContent" class="row">
                             <div class="small-6 columns text-left">Total Carbs</div>
                             <div class="small-6 columns text-right">{{ page.total-carbs-incl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="sugarContent" class="row">
                             <div class="small-6 columns text-left">Sugars</div>
                             <div class="small-6 columns text-right">{{ page.sugars-incl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="fatContent" class="row">
                             <div class="small-6 columns text-left">Total fat</div>
                             <div class="small-6 columns text-right">{{ page.total-fat-incl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="saturatedFatContent" class="row">
                             <div class="small-6 columns text-left">Saturated fat</div>
                             <div class="small-6 columns text-right">{{ page.saturated-fat-incl }} g</div>        
                         </div>
-                        <div class="row">
+                        <div itemprop="fiberContent" class="row">
                             <div class="small-6 columns text-left">Fiber</div>
                             <div class="small-6 columns text-right">{{ page.fiber-incl }} g</div>        
                         </div>
@@ -179,6 +179,95 @@
             </div>
         </div> 
     
+    
+    
+     <!--     
+            <table>
+                <thead>
+                  <tr>
+                    <td scope="col">Per 100g</td>
+                    <th scope="col">Calories</th>
+                    <th itemprop="proteinContent" scope="col">Protein</th>
+                    <th itemprop="carbohydrateContent" scope="col">Total Carbs</th>
+                    <th itemprop="sugarContent" scope="col">Sugars</th>
+                    <th itemprop="fatContent" scope="col">Total Fat</th>
+                    <th itemprop="saturatedFatContent" scope="col">Saturated Fat</th>
+                    <th itemprop="fiberContent" scope="col">Fiber</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                    <th scope="row" data-title="Excl. optional Ingredients">excl. opt.</th>
+                    <td scope="row" itemprop="calories" data-title="Calories">{{ page.calories }} kcal</td>
+                    <td scope="row" data-title="Protein">{{ page.protein }}g</td>
+                    <td scope="row" data-title="Total Carbs">{{ page.total-carbs }}g</td>
+                    <td data-title="Sugars">{{ page.sugars }}g</td>
+                    <td data-title="Total fat">{{ page.total-fat }}g</td>
+                    <td data-title="Saturated fat">{{ page.saturated-fat }}g</td>
+                    <td data-title="Fiber">{{ page.fiber }}g</td>
+                 </tr>
+                 <tr>
+                    <th scope="row" data-title="Incl. optional Ingredients">incl. opt.</th>
+                    <td scope="row" itemprop="calories" data-title="Calories">{{ page.calories }} kcal</td>
+                    <td scope="row" data-title="Protein">{{ page.protein }}g</td>
+                    <td scope="row" data-title="Total Carbs">{{ page.total-carbs }}g</td>
+                    <td data-title="Sugars">{{ page.sugars }}g</td>
+                    <td data-title="Total fat">{{ page.total-fat }}g</td>
+                    <td data-title="Saturated fat">{{ page.saturated-fat }}g</td>
+                    <td data-title="Fiber">{{ page.fiber }}g</td>
+                 </tr>
+                </tbody> 
+            </table>
+        </div>
+-->
+
+
+
+
+
+
+        
+        <!--
+        <div itemprop="nutrition" itemscope itemtype="http://schema.org/NutritionInformation" class="small-12 columns">       
+            <h3>Nutrition facts</h3>
+            <table class="responsive-table table">
+                <thead>
+                  <tr>
+                    <td scope="col">Per 100g</td>
+                    <th scope="col">Calories</th>
+                    <th itemprop="proteinContent" scope="col">Protein</th>
+                    <th itemprop="carbohydrateContent" scope="col">Total Carbs</th>
+                    <th itemprop="sugarContent" scope="col">Sugars</th>
+                    <th itemprop="fatContent" scope="col">Total Fat</th>
+                    <th itemprop="saturatedFatContent" scope="col">Saturated Fat</th>
+                    <th itemprop="fiberContent" scope="col">Fiber</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                    <th scope="row" data-title="Excl. optional Ingredients">excl. opt.</th>
+                    <td scope="row" itemprop="calories" data-title="Calories">{{ page.calories }} kcal</td>
+                    <td scope="row" data-title="Protein">{{ page.protein }}g</td>
+                    <td scope="row" data-title="Total Carbs">{{ page.total-carbs }}g</td>
+                    <td data-title="Sugars">{{ page.sugars }}g</td>
+                    <td data-title="Total fat">{{ page.total-fat }}g</td>
+                    <td data-title="Saturated fat">{{ page.saturated-fat }}g</td>
+                    <td data-title="Fiber">{{ page.fiber }}g</td>
+                 </tr>
+                 <tr>
+                    <th scope="row" data-title="Incl. optional Ingredients">incl. opt.</th>
+                    <td scope="row" itemprop="calories" data-title="Calories">{{ page.calories }} kcal</td>
+                    <td scope="row" data-title="Protein">{{ page.protein }}g</td>
+                    <td scope="row" data-title="Total Carbs">{{ page.total-carbs }}g</td>
+                    <td data-title="Sugars">{{ page.sugars }}g</td>
+                    <td data-title="Total fat">{{ page.total-fat }}g</td>
+                    <td data-title="Saturated fat">{{ page.saturated-fat }}g</td>
+                    <td data-title="Fiber">{{ page.fiber }}g</td>
+                 </tr>
+                </tbody> 
+            </table>
+        </div>
+        -->
     </div> 
     
     <div class="row main">
