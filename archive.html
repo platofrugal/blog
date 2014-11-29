@@ -43,23 +43,21 @@ img-size:
 <!-- TAB CONTENT -->
 
     <div class="tabs-content">
-        <div class="content active" id="panel-tag">
-            {% assign sortedTags = site.tags | sort %}
-            {% for tag in sortedTags %}
-            <div class="main">
-            {% assign postTitle = tag[1] | where: "category", "recipe" | sort %}
-            {% if postTitle != empty %}
-                    <h2>{{ tag[0] }}</h2>
+        <div class="content row active" id="panel-tag">
+                {% for tag in site.tags %}
+                <div class="main">
+                {% assign currentTag = tag | first %}
+                <h2>{{ currentTag | upcase}}</h2>
+                {% for post in site.posts %}
+                    {% if post.tags contains currentTag %}
                     <ul>
-                    {% for p in postTitle %}
-                        <li><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
-                    {% endfor %}
+                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
                     </ul>
-            {% endif %}
-            </div>
-            {% endfor %}
+                    {% endif %}
+                {% endfor %}
+                </div>
+                {% endfor %}
         </div>
-        
         <div class="content" id="panel-date">     
             <!-- RECIPES ORDERED BY DATE -->
             <ul class="main">
@@ -75,25 +73,7 @@ img-size:
                 {% endif %}
             {% endfor %}
             </ul>                                                                     
-        </div>          
-       <!--
-        <div class="content" id="paneltype">  
-            <div class="main">
-            {% for type in site.data.types %}
-                <h2>{{ type }}</h2>
-            {% assign type-site = type %}
-                <ul>
-                {% for post in site.posts %}
-                    {% if post.type == type-site %}
-                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                    {% endif %}                     
-                {% endfor %}
-                </ul>
-            {% endfor %}
-            
-            </div>
-        </div>
-        -->                     
+        </div>                             
     </div>
     
 
