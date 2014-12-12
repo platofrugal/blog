@@ -8,7 +8,9 @@ duration: 3 minutes
 vessel: a deep dish
 heat: []
 servings: 1
-tags: [gluten-free, meatless monday, snack]
+tags: [gluten-free, meatless monday]
+amount: snack
+
 
 # NUTRITION FACTS
 calories-excl: 

@@ -9,6 +9,7 @@ vessel: casserole dish
 heat: oven
 servings: 4
 tags: [gluten-free, meatless monday, refined sugar-free]
+amount: snack
 
 # NUTRITION FACTS
 calories-excl: 

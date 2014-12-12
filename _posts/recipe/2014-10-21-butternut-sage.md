@@ -9,6 +9,7 @@ vessel: Pan
 heat: Stove
 servings: 1
 tags: [gluten-free, dairy-free, meatless monday]
+amount: meal
 
 calories: 
 protein: 

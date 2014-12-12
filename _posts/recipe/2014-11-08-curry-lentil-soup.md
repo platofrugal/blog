@@ -10,6 +10,7 @@ vessel: pot
 heat: hotplate
 servings: 2
 tags: [dairy-free, gluten-free, meatless monday, refined sugar-free]
+amount: meal
 
 calories: 
 protein: 

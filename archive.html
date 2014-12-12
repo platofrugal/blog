@@ -31,8 +31,9 @@ img-size:
                 <div class="small-12 columns">
                     <!-- ACCORDION AND TAB MENU -->
                     <dl class="tabs" data-tab>
-                        <dd class="medium-6 columns active"><a href="#panel-tag">BY TAG</a></dd>
-                        <dd class="medium-6 columns"><a href="#panel-date">BY DATE</a></dd>
+                        <dd class="medium-4 columns active"><a href="#panel-tag"><span class="italic">BY</span> TAG</a></dd>
+                        <dd class="medium-4 columns"><a href="#panel-date"><span class="italic">BY</span> DATE</a></dd>
+                        <dd class="medium-4 columns"><a href="#panel-amount"><span class="italic">BY</span> SIZE</a></dd>
                     </dl>
                 </div> 
             </div>   
@@ -73,7 +74,23 @@ img-size:
                 {% endif %}
             {% endfor %}
             </ul>                                                                     
-        </div>                             
+        </div>     
+        <div class="content" id="panel-amount">     
+            <!-- RECIPES ORDERED BY PORTION SIZE -->
+            <div class="main">
+            {% for amount in site.data.amount %}
+                <h2>{{ amount }}</h2>
+            {% assign amount-site = amount %}
+                <ul>
+                {% for post in site.posts %}
+                    {% if post.amount == amount-site %}
+                        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    {% endif %}                     
+                {% endfor %}
+                </ul>
+            {% endfor %}        
+            </div>                                                                                    
+        </div>                                                
     </div>
     
 
