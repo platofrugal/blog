@@ -1,0 +1,19 @@
+<footer class="white">
+    <nav class="small-12 columns"> 
+        <ul>
+            {% for entry in site.data.nav-social %}
+                {% if entry != null %}
+                    <li>
+                        <a href="{{ entry.href }}"> {{ entry.title }} </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+    <p>
+        <a href="http://creativecommons.org/licenses/by/4.0/">CC 4.0 License</a> 
+        <span> · </span>
+        <span><a href="{{ site.baseurl }}/disclaimer/">Disclaimer</a></span>
+    </p>
+</footer>
+{% include js.html %}

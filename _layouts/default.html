@@ -17,10 +17,10 @@ layout: compress
             {% include related-posts.html %}   
         {% endif %} 
         </div>  
-        {% if page.title != 'Archive' %}             
-            {% include footer.html %}
+        {% if page.title == 'Archive' or page.title == 'About' %}             
+            {% include footer-white.html %}
         {% else %}
-            {% include js.html %}
+            {% include footer.html %}
         {% endif %}
     </body>
 </html>

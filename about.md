@@ -5,49 +5,22 @@ layout: default
 
 ##ABOUT
 
-This site is based on Jekyll and hosted on [github](http://github.com/platofrugal){:target="_blank"}{: .external-link}.
+The Concept behind Plato Fugal is supposed to be holistical frugal.
+The site itself is hosted on [github](http://github.com/platofrugal){:target="_blank"}{: .external-link} and generated with [jekyll](http://jekyllrb.com/){:target="_blank"}{: .external-link}. The sites' design is meant to be minimal as well as the content - A pure recipe blog focusing on the essential facts and recipe guidelines.
 
-###THIS PART IS UNDER CONSTRUCTION.
+###Stream of Keywords 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra
-mollis fringilla. Mauris sapien urna, cursus luctus consequat at, varius ut
-ipsum. Etiam neque diam, consectetur et pellentesque et, vulputate in est.
-Curabitur sed erat risus. Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Praesent ullamcorper eros non lorem venenatis quis ultricies diam
-tincidunt. Duis vestibulum luctus diam vel mattis. Aliquam in massa et tortor
-sodales placerat vel eu mi. Integer tincidunt lectus id lacus fermentum
-sodales. Vestibulum posuere ante vitae risus pharetra sit amet porttitor elit
-dapibus.
-
-Integer lacus lorem, interdum vel pharetra eu, elementum non enim. Fusce
-dictum euismod magna, ut interdum elit suscipit ut. Sed molestie faucibus
-sollicitudin. Sed vel quam dui, ac interdum enim. Proin mi sapien, faucibus id
-pharetra ut, ornare quis leo. Phasellus sit amet orci in magna hendrerit
-convallis ullamcorper ac metus. Aenean posuere nisi sed ante semper a euismod
-ante rhoncus. Donec at dui eros, at varius eros. Proin molestie, ipsum sed
-vehicula volutpat, turpis tortor sollicitudin dui, vitae convallis enim risus
-sit amet nisl. Donec vel tellus et lacus iaculis luctus. Proin tempus
-venenatis lorem sagittis vulputate. Morbi non arcu tortor. In hac habitasse
-platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pharetra
-mollis fringilla. Mauris sapien urna, cursus luctus consequat at, varius ut
-ipsum. Etiam neque diam, consectetur et pellentesque et, vulputate in est.
-Curabitur sed erat risus. Lorem ipsum dolor sit amet, consectetur adipiscing
-elit. Praesent ullamcorper eros non lorem venenatis quis ultricies diam
-tincidunt. Duis vestibulum luctus diam vel mattis. Aliquam in massa et tortor
-sodales placerat vel eu mi. Integer tincidunt lectus id lacus fermentum
-sodales. Vestibulum posuere ante vitae risus pharetra sit amet porttitor elit
-dapibus.
-
-Integer lacus lorem, interdum vel pharetra eu, elementum non enim. Fusce
-dictum euismod magna, ut interdum elit suscipit ut. Sed molestie faucibus
-sollicitudin. Sed vel quam dui, ac interdum enim. Proin mi sapien, faucibus id
-pharetra ut, ornare quis leo. Phasellus sit amet orci in magna hendrerit
-convallis ullamcorper ac metus. Aenean posuere nisi sed ante semper a euismod
-ante rhoncus. Donec at dui eros, at varius eros. Proin molestie, ipsum sed
-vehicula volutpat, turpis tortor sollicitudin dui, vitae convallis enim risus
-sit amet nisl. Donec vel tellus et lacus iaculis luctus. Proin tempus
-venenatis lorem sagittis vulputate. Morbi non arcu tortor. In hac habitasse
-platea dictumst.
+*raise*{: .key-s} *awareness of the simplicity of diet*{: .key-xl} 
+*be fed*{: .key-s} *healty, tasty*{: .key-l} *and*{: .key-s} *satisfying*{: .key-l} 
+*not necessarily expensive,*{: .key-s}
+*not tied to a specific*{: .key-s} *nutrition morality*{: .key-m} *or*{: .key-s} *dietary belief*{: .key-m}
+*fitness food*{: .key-xl} *naturally tasty*{: .key-m}
+*ground the sense of taste*{: .key-l} *away from*{: .key-s} *gustatory supersaturated food*{: .key-m}
+*minimalism*{: .key-l}
+*low*{: .key-s} *salt*{: .key-m}
+*low*{: .key-s} *carb*{: .key-m}
+*refined sugar-free*{: .key-l}
+*high*{: .key-s} *protein*{: .key-m}
+*...*{: .key-m}
 
 {: .row}
-

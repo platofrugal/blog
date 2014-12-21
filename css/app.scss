@@ -109,6 +109,42 @@ h4, h5 {
     text-transform: uppercase;
 }
 
+/* ============================================================
+  ABOUT KEYWORD TEXT SIZES
+============================================================ */
+
+.key-s {
+    font-family: $body-font-family;
+    font-style: italic;
+    font-size: rem-calc(16);
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: normal;
+}
+.key-m {
+    font-family: $header-font-family;
+    font-style: normal;
+    font-size: rem-calc(18);
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.key-l {
+    font-family: $header-font-family;
+    font-style: normal;
+    font-size: rem-calc(22);
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.key-xl {
+    font-family: $header-font-family;
+    font-style: normal;
+    font-size: rem-calc(28);
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 
 /* Effect 8: border slight translate */
@@ -353,7 +389,7 @@ background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53
     letter-spacing: 2px;
 }
 .preview, .preview:visited {
-    margin: 0.3rem;
+    margin: 1rem 0.3rem;
     background: none repeat scroll 0% 0% rgba($body-bg, 1);
     text-align: center;
 }
@@ -699,7 +735,6 @@ img.impressions {
     padding: 0px 6px;
 }
 
-
 /* ============================================================
   OWL CAROUSEL
 ============================================================ */
@@ -790,6 +825,42 @@ footer li {
     display: inline-block;
 }
 footer ul li a {
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    display: block;
+    font-family: $header-font-family;
+    font-size: rem-calc(14);
+    font-weight: 400;
+    letter-spacing: 2px;
+    padding: 20px 15px;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+  FOOTER WHITE
+============================================================ */
+
+footer.white, footer.white a {
+    color: $body-font-color;
+    font-size: rem-calc(16);
+}
+footer.white a:hover {
+    color: $alert-color;
+}
+
+footer.white {
+    background-color: $body-bg;
+    padding: 50px 0px;
+    text-align: center;
+}
+footer.white ul {
+    line-height: 1;
+    width: 100%;
+}
+footer.white li {
+    display: inline-block;
+}
+footer.white ul li a {
     margin-left: 1.2em;
     margin-right: 1.2em;
     display: block;
