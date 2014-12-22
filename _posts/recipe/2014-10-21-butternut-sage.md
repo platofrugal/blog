@@ -2,8 +2,8 @@
 layout: default
 categories: recipe
 
+# TOP DETAILS
 title: Butternut squash and sage butter
-
 duration: 15 minutes
 vessel: Pan
 heat: Stove
@@ -11,6 +11,7 @@ servings: 1
 tags: [gluten-free, dairy-free, meatless monday]
 amount: meal
 
+# NUTRITION FACTS
 calories: 
 protein: 
 total-carbs: 
@@ -19,10 +20,12 @@ total-fat:
 saturated-fat: 
 fiber: 
 
+# IMAGES
 img: butter-sage
 img-preview: butter-sage-01
 img-count: 2
-    
+  
+# RECIPE  
 ingredients:
     Main:
         - 1 Butternut squash

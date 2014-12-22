@@ -5,13 +5,13 @@ layout: default
 
 ##ABOUT
 
-The Concept behind Plato Fugal is supposed to be holistical frugal.
+The concept behind Plato Frugal is supposed to be holistical frugal.
 The site itself is hosted on [github](http://github.com/platofrugal){:target="_blank"}{: .external-link} and generated with [jekyll](http://jekyllrb.com/){:target="_blank"}{: .external-link}. The sites' design is meant to be minimal as well as the content - A pure recipe blog focusing on the essential facts and recipe guidelines.
 
 ###Stream of Keywords 
 
 *raise*{: .key-s} *awareness of the simplicity of diet*{: .key-xl} 
-*be fed*{: .key-s} *healty, tasty*{: .key-l} *and*{: .key-s} *satisfying*{: .key-l} 
+*be fed*{: .key-s} *healthy, tasty*{: .key-l} *and*{: .key-s} *satisfying*{: .key-l} 
 *not necessarily expensive,*{: .key-s}
 *not tied to a specific*{: .key-s} *nutrition morality*{: .key-m} *or*{: .key-s} *dietary belief*{: .key-m}
 *fitness food*{: .key-xl} *naturally tasty*{: .key-m}
@@ -24,3 +24,4 @@ The site itself is hosted on [github](http://github.com/platofrugal){:target="_b
 *...*{: .key-m}
 
 {: .row}
+
