@@ -6,7 +6,7 @@ layout: default
 ##ABOUT
 
 The concept behind Plato Frugal is supposed to be holistical frugal.
-The site itself is hosted on [github](http://github.com/platofrugal){:target="_blank"}{: .external-link} and generated with [jekyll](http://jekyllrb.com/){:target="_blank"}{: .external-link}. The sites' design is meant to be minimal as well as the content - A pure recipe blog focusing on the essential facts and recipe guidelines.
+The site itself is hosted on [github](http://github.com/platofrugal/blog){:target="_blank"}{: .external-link} and generated with [jekyll](http://jekyllrb.com/){:target="_blank"}{: .external-link}. The sites' design is meant to be minimal as well as the content - A pure recipe blog focusing on the essential facts and recipe guidelines.
 
 ###Stream of Keywords 
 

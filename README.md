@@ -1,29 +1,17 @@
 # Plato Frugal
 
-A food blog for modest and clean recipes.
+A food blog for modest and clean fitness recipes.
 
-## Requirements
+---
 
-You'll need to have the following items installed before continuing.
+## Major modifications of the standard jekyll template:
 
-  * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
-  * [Grunt](http://gruntjs.com/): Run `[sudo] npm install -g grunt-cli`
-  * [Bower](http://bower.io): Run `[sudo] npm install -g bower`
+* Modern and minimal custom design
+* 'Responsive' by using the [ZURB foundation](http://foundation.zurb.com/) front-end framework and therefore compatible with Internet Explorer 8+ and all modern browsers.  
 
-## Quickstart
+* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) integrated for social sharing.
+* [Owl Caroulel](http://owlgraphic.com/owlcarousel/) for the recommendation wrapper.
+* [Salvattore](http://salvattore.com/) as a jQuery Masonry alternative with CSS-driven configuration.
+* [lazysizes](https://github.com/aFarkas/lazysizes) as a SEO-friendly and fast lazyloader for responsive image loading.
+* recipe template matching the schema.org specification.
 
-```bash
-git clone git@github.com:zurb/foundation-libsass-template.git
-npm install && bower install
-```
-
-While you're working on your project, run:
-
-`grunt`
-
-And you're set!
-
-## Directory Structure
-
-  * `scss/_settings.scss`: Foundation configuration settings go in here
-  * `scss/app.scss`: Application styles go here

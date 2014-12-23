@@ -41,7 +41,7 @@
   <title>   
     {% if page.title %}
         {% if page.title != 'blog' %}
-            {{ site.title }} - {{ page.title }}
+            {{ page.title }} - {{ site.title }}
         {% else %}
             {{ site.title }} - {{ site.description }} 
         {% endif %}
