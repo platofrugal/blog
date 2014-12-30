@@ -2,7 +2,7 @@
 layout: default
 categories: recipe
 
-title: Chocolate Oatmeal
+title: Chocolate oatmeal
 
 duration: 2 minutes
 vessel: 1 deep dish

@@ -3,7 +3,7 @@ layout: default
 categories: recipe
 category: recipe
 
-title: Curry Lentil Soup with peanut butter
+title: Curry lentil soup with peanut butter
 
 duration: 20 minutes
 vessel: pot

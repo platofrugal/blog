@@ -3,7 +3,7 @@ layout: default
 categories: recipe
 
 # TOP DETAILS
-title: Tomatoe Mozzarella salad
+title: Tomato mozzarella salad
 duration: 3 minutes
 vessel: a deep dish
 heat: []
